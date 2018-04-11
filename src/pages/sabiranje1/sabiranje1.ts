@@ -7,6 +7,10 @@ export class Sabiranje1 {
   sabirak1 = 0;
   sabirak2 = 0;
 
+  constructor() {
+    this.restart();
+  }
+
   ionViewLoaded() {
     this.restart();
   }

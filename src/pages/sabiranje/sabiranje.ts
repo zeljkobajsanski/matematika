@@ -12,6 +12,7 @@ export class Sabiranje {
   @ViewChild('input') input;
 
   constructor(private toastController: ToastController) {
+    this.restart();
   }
 
   ionViewLoaded() {
@@ -22,7 +23,9 @@ export class Sabiranje {
     this.sabirak1 = Math.floor(Math.random() * 9) + 1;
     this.sabirak2 = Math.floor(Math.random() * 9) + 1;
     this.result = '';
-    this.input.setFocus();
+    if (this.input) {
+      this.input.setFocus();
+    }
   }
 
   verify() {

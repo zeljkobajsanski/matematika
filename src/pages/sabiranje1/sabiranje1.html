@@ -9,9 +9,15 @@
 
 <ion-content class="sabiranje1" padding>
   <p text-center><span>{{sabirak1}}</span> + <span>{{sabirak2}}</span></p>
-  <p><input type="number"> + (<input type="number"> + <input type="number">)=</p>
-  <p>(<input type="number"> + <input type="number">) + <input type="number">=</p>
-  <p>10 + <input type="number"> = <input type="number"></p>
+  <p><input type="number" [(ngModel)]="num1" [class.invalid]="!isNum1Valid"> + (<input type="number" [(ngModel)]="num2"
+                                                                                      [class.invalid]="!isNum2Valid"> +
+    <input type="number" [class.invalid]="!isNum3Valid" [(ngModel)]="num3">)=</p>
+  <p>(<input type="number" [class.invalid]="!isNum4Valid" [(ngModel)]="num4"> + <input type="number" [(ngModel)]="num5"
+                                                                                       [class.invalid]="!isNum5Valid">) +
+    <input type="number" [class.invalid]="!isNum6Valid" [(ngModel)]="num6">=</p>
+  <p>10 + <input type="number" [class.invalid]="!isNum7Valid" [(ngModel)]="num7"> = <input type="number"
+                                                                                           [class.invalid]="!isNum8Valid"
+                                                                                           [(ngModel)]="num8"></p>
   <div class="row">
     <div class="col">
       <button ion-button block color="secondary" (click)="restart()">Novi broj</button>

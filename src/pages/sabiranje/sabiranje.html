@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Sabiranje</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="sabiranje">
+  <p text-center><span>{{sabirak1}}</span> + <span>{{sabirak2}}</span></p>
+  <ion-item>
+    <ion-input type="number" text-center [(ngModel)]="result" #input></ion-input>
+  </ion-item>
+  <div class="row">
+    <div class="col">
+      <button ion-button block color="secondary" (click)="restart()">Novi broj</button>
+    </div>
+    <div class="col">
+      <button ion-button block (click)="verify()">Potvrdi</button>
+    </div>
+  </div>
+</ion-content>
